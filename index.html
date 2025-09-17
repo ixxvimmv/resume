@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Resume</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f7f9fb;
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 30px;
+        color: #333;
+    }
+form {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px 35px;  /* added more left/right padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h3 {
+    color: #222;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border-left: 4px solid #4c89af;
+    padding-left: 10px;
+}
+
+input, textarea {
+    width: 95%;  
+    padding: 10px 14px;
+    margin: 8px auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fafafa;
+    transition: 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76,175,80,0.2);
+}
+
+input[type="submit"] {
+    width: 100%;
+    background: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 12px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #43a047;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Resume Form</h2>
+
+<form method="POST" action="resume_process.php" target="_blank" enctype="multipart/form-data">
+    <h3>Personal Information</h3>
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="middle_name" placeholder="Middle Name">
+    <input type="text" name="last_name" placeholder="Last Name" required>
+    <input type="text" name="contact" placeholder="Contact Number" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="address" placeholder="Address" required>
+    <textarea name="objectives" placeholder="Career Objectives" rows="3"></textarea>
+
+    <h3>Educational Background</h3>
+    <input type="text" name="school_name" placeholder="School / University" required>
+    <input type="text" name="year_graduate" placeholder="Year Graduated" required>
+
+    <h3>Skills</h3>
+    <input type="text" name="skill1" placeholder="Skill 1" required>
+    <input type="text" name="skill2" placeholder="Skill 2">
+    <input type="text" name="skill3" placeholder="Skill 3">
+    
+    <h3>Trainings/Seminars</h3>
+    <input type="text" name="training_title" placeholder="Training / Seminar Title">
+    <input type="text" name="training_date" placeholder="Date">
+
+    <h3>References</h3>
+    <input type="text" name="ref_name" placeholder="Reference Name">
+    <input type="text" name="ref_contact" placeholder="Reference Contact">
+
+    <h3>Profile Picture</h3>
+    <input type="file" name="profile_pic" accept="image/*">
+
+    <input type="submit" value="Generate Resume">
+</form>
+
+</body>
+</html>
